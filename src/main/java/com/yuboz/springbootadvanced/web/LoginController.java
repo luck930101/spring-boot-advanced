@@ -11,7 +11,6 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import javax.naming.Binding;
 import javax.validation.Valid;
 import java.util.List;
 
@@ -64,8 +63,9 @@ public class LoginController {
     }
 
     @GetMapping("/exception")
-    public String testException(){
-        throw new RuntimeException();
+    public String testException()
+    {
+        throw new RuntimeException("Test throw exception!");
     }
 
 }
