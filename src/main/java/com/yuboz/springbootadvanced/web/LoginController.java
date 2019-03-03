@@ -63,4 +63,9 @@ public class LoginController {
 
     }
 
+    @GetMapping("/exception")
+    public String testException(){
+        throw new RuntimeException();
+    }
+
 }
